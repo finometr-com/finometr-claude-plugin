@@ -12,11 +12,15 @@
   "repository": "https://github.com/finometr-com/finometr-claude-plugin",
   "license": "MIT",
   "keywords": [
-    "finance",
-    "cash-flow",
-    "budget",
-    "small-business",
-    "bookkeeping"
+    "cash-flow-forecast",
+    "cash-gap-alerts",
+    "budget-vs-actual",
+    "financial-targets",
+    "financial-performance",
+    "planned-payments",
+    "daily-brief",
+    "open-banking",
+    "sme-finance"
   ],
   "documentationUrl": "https://finometr.com/docs/assistants",
   "privacyPolicyUrl": "https://finometr.com/privacy",
