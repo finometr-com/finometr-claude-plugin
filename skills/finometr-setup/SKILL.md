@@ -12,6 +12,7 @@ Use the Finometr server this plugin adds. In Claude Code it shows in `/mcp` as `
 
 - If several Finometr servers are connected (for example a Finometr connector from claude.ai as well), use only this plugin's server. They can belong to different Finometr accounts or sites.
 - If this plugin's server needs authentication, ask the user to run `/mcp`, pick `plugin:finometr:finometr` and sign in. Do not fall back to another Finometr server.
+- If the user has no Finometr account yet, they request one at https://finometr.com with the Request access button on the homepage. New accounts are activated within a day, with an e-mail; after that they connect again.
 
 ## Find what is missing
 

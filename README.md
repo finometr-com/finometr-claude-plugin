@@ -1,6 +1,6 @@
 # Finometr for Claude Code
 
-[Finometr](https://finometr.com) shows small businesses and freelancers where their money is going — across several bank accounts, cash and several businesses at once — and warns before the cash runs short. It brings together bank accounts connected through Open Banking (Europe), manual accounts and imported statements, keeps business units such as "Studio" and "Personal" apart, and forecasts each unit's balance from its planned payments.
+[Finometr](https://finometr.com) shows entrepreneurs and SMEs where their money is going — across several bank accounts, cash and several businesses at once — and warns before the cash runs short. It brings together bank accounts connected through Open Banking (Europe), manual accounts and imported statements, keeps business units such as "Studio" and "Personal" apart, and forecasts each unit's balance from its planned payments.
 
 This plugin connects Claude Code to your Finometr account. Ask about balances, transactions, the cash-flow forecast, spending by category, budgets and notifications in your own words, get a daily brief, and — when you allow it — let Claude create manual accounts, record transactions, plan payments, import bank statements, set categories and monthly targets. The skills have Claude say what it is about to write and wait for your yes, and Claude Code asks your permission before it calls a tool. Finometr's tools never delete anything.
 
@@ -34,7 +34,9 @@ Run it before starting Claude Code, or inside a running session prefixed with `!
 
 ## Your Finometr account
 
-Finometr is in closed beta: your account has to be approved before you can allow access. Sign-in uses OAuth on Finometr's own page; Claude never receives your Finometr password or your bank login. Each client gets its own connection — the Claude app and Claude Code are connected separately — and every connection is listed in Finometr under Settings → Connected assistants, where you can revoke it.
+No Finometr account yet? Request access at [finometr.com](https://finometr.com) with the Request access button on the homepage. New accounts are activated within a day, and you'll get an e-mail; then connect again.
+
+Sign-in uses OAuth on Finometr's own page; Claude never receives your Finometr password or your bank login. Each client gets its own connection — the Claude app and Claude Code are connected separately — and every connection is listed in Finometr under Settings → Connected assistants, where you can revoke it.
 
 ## What the plugin sends and where
 
