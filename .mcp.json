@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "finometr": {
+      "type": "http",
+      "url": "https://finometr.com/mcp"
+    }
+  }
+}
