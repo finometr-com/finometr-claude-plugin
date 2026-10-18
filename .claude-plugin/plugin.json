@@ -1,0 +1,18 @@
+{
+  "name": "finometr",
+  "displayName": "Finometr",
+  "version": "0.1.0",
+  "description": "Ask Claude about your Finometr cash flow — balances, transactions, the forecast, budgets and a daily brief — and let it add accounts, transactions and bank statements after you confirm.",
+  "author": {
+    "name": "FINOMETR LTD",
+    "email": "support@finometr.com",
+    "url": "https://finometr.com"
+  },
+  "homepage": "https://finometr.com/docs/assistants",
+  "repository": "https://github.com/finometr-com/finometr-claude-plugin",
+  "license": "MIT",
+  "keywords": ["finance", "cash-flow", "budget", "small-business", "bookkeeping"],
+  "documentationUrl": "https://finometr.com/docs/assistants",
+  "privacyPolicyUrl": "https://finometr.com/privacy",
+  "termsOfServiceUrl": "https://finometr.com/terms"
+}
