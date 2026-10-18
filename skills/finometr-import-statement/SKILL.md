@@ -8,7 +8,7 @@ The Finometr tool `import_statement` takes rows you have already read from the f
 
 ## 1. Pick the account
 
-- Ask which unit and account the statement belongs to if it is not clear. `list_units` and `list_accounts` show them; only accounts with `kind: "manual"` can take an import.
+- Ask which account the statement belongs to if it is not clear. `list_accounts` without `unit` shows the accounts of every unit, each with its `unit`; only accounts with `kind: "manual"` can take an import. Their `freshness.lastImportAt` tells when the last statement went in, which helps pick the period to import.
 - If the unit has no manual account, offer to create one with `add_manual_account` (a name such as the bank's, and the statement's currency). Create it only after the user agrees.
 
 ## 2. Read the rows
@@ -38,13 +38,13 @@ Call `import_statement` with `dryRun: true` (it is also the default) and a new `
 
 ## 4. Import after a yes
 
-Only when the user confirms, call `import_statement` again with the same rows and `dryRun: false`. Report `imported`, `duplicates` and the new `balance`.
+Only when the user confirms, call `import_statement` again with the same rows and `dryRun: false`. Report `imported`, `duplicates` and the new `balance`. Imported rows are marked in Finometr as written by the assistant: `search_transactions` shows them with `createdVia`.
 
 Sending the same rows again is safe: rows already imported count as duplicates. Set `adjustBalance: true` only if the user asks to close a `difference` with a correction.
 
 ## Long statements
 
-One call takes at most 500 rows. For a longer statement, split it by calendar month: one call per month, with `statement.from` and `statement.to` set to that month's part of the statement. Preview every month first, show the totals, then import month by month after the user's yes.
+One call takes at most 500 rows. For a longer statement, split it by calendar month: one call per month, with `statement.from` and `statement.to` set to that month's part of the statement. Preview every month first, show the totals, then import month by month after the user's yes. Imports have a daily quota: if a call fails with `RATE_LIMITED`, tell the user which months went in and import the rest the next day.
 
 ## Keep in mind
 

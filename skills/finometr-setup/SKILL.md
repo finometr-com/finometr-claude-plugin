@@ -12,9 +12,9 @@ Check these in order and stop at the first one you find.
 
 1. **No accounts at all.** Call `get_capabilities`. If `account.banksConnected` and `account.manualAccounts` are both `0`, the user has no accounts yet.
    - Offer to create a manual account with `add_manual_account` (for cash, or for a bank whose statements the user can export), or to connect a bank in the app: `get_link` with `page: "connect_bank"` returns the link.
-2. **A manual account with no transactions.** Call `list_units`, then `list_accounts` for each unit. For each account with `kind: "manual"`, call `search_transactions` with that unit, `account` set to the account id and `from` set to 365 days before today. An empty result means the account has no transactions in the last year.
+2. **A manual account with no transactions.** Call `list_accounts` without `unit`: it lists the accounts of every unit, each with `freshness`. An account with `kind: "manual"` whose `freshness.lastEntryAt` and `freshness.lastImportAt` are both `null` has no transactions yet.
    - Offer to import a bank statement (see the Finometr statement-import skill) or to record transactions with `add_manual_transaction`.
-3. **A bank connection that needs attention.** Call `get_notifications`. An unread notification of type `bank_sync_failed` means a bank stopped syncing.
+3. **A bank connection that needs attention.** Call `get_notifications` without `unit` (unread notifications of every unit). One of type `bank_sync_failed` means a bank stopped syncing. A bank account whose `freshness.lastSyncAt` is `null` has not synced yet.
    - Reconnecting happens in the app: `get_link` with `page: "banks"` returns the link.
 
 If `get_capabilities` returns `nextSteps`, offer those too, using the `tool` or `url` each step gives.
