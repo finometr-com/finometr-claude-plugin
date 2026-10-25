@@ -15,14 +15,7 @@ This plugin connects Claude Code to your Finometr account. Ask about balances, t
 
 ## Install
 
-Once Finometr is listed in Anthropic's plugin directory, install it from `/plugin` in Claude Code. Until then, clone this repository and start Claude Code with the plugin loaded:
-
-```bash
-git clone https://github.com/finometr-com/finometr-claude-plugin
-claude --plugin-dir ./finometr-claude-plugin
-```
-
-Then run `/mcp`, pick `plugin:finometr:finometr` and sign in on the Finometr page that opens: check that it shows your account, choose Read, Write or both, and click Allow.
+Install Finometr from `/plugin` in Claude Code. Then run `/mcp`, pick `plugin:finometr:finometr` and sign in on the Finometr page that opens: check that it shows your account, choose Read, Write or both, and click Allow.
 
 Without the plugin, you can add the server alone:
 
