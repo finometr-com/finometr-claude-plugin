@@ -41,7 +41,7 @@ The plugin has no code of its own: no scripts, hooks or local servers. It points
 - Connecting an AI assistant: https://finometr.com/docs/assistants
 - Privacy Policy: https://finometr.com/privacy
 - Terms of Service: https://finometr.com/terms
-- Support: support@finometr.com
+- Support: https://finometr.com/support (or support@finometr.com)
 
 ## License
 
