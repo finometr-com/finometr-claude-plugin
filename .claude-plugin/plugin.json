@@ -1,7 +1,7 @@
 {
   "name": "finometr",
   "displayName": "Finometr",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Ask Claude about your Finometr cash flow — balances, transactions, the forecast, budgets and a daily brief — and let it add accounts, transactions and bank statements after you confirm.",
   "author": {
     "name": "FINOMETR LTD",
@@ -23,6 +23,7 @@
     "sme-finance"
   ],
   "documentationUrl": "https://finometr.com/docs/assistants",
+  "supportUrl": "https://finometr.com/support",
   "privacyPolicyUrl": "https://finometr.com/privacy",
   "termsOfServiceUrl": "https://finometr.com/terms"
 }
