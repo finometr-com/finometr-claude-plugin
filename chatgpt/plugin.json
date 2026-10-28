@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "finometr",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Ask ChatGPT about your Finometr cash flow — balances, transactions, the forecast, budgets and a daily brief — and let it add accounts, transactions and bank statements.",
   "author": {
     "name": "FINOMETR LTD",
@@ -11,7 +11,15 @@
   "homepage": "https://finometr.com/docs/assistants",
   "repository": "https://github.com/finometr-com/finometr-claude-plugin",
   "license": "MIT",
-  "keywords": ["cash-flow-forecast", "cash-gap-alerts", "budget-vs-actual", "planned-payments", "daily-brief", "open-banking", "sme-finance"],
+  "keywords": [
+    "cash-flow-forecast",
+    "cash-gap-alerts",
+    "budget-vs-actual",
+    "planned-payments",
+    "daily-brief",
+    "open-banking",
+    "sme-finance"
+  ],
   "extensions": {
     "com.openai": {
       "interface": {
@@ -20,7 +28,10 @@
         "longDescription": "Finometr shows the cash flow of your business units from your bank accounts and manual accounts. Ask for a daily brief, balances, transactions, planned payments, the cash-flow forecast with the day your cash goes below its threshold, and spending against the month's budget. Finometr can also add a manual account, manual or planned transactions, a business unit or a month's target, and import a bank statement you share. It never moves money and never deletes anything; bank connections are made in the Finometr app.",
         "developerName": "FINOMETR LTD",
         "category": "Finance",
-        "capabilities": ["Read", "Write"],
+        "capabilities": [
+          "Read",
+          "Write"
+        ],
         "websiteURL": "https://finometr.com",
         "supportURL": "https://finometr.com/support",
         "privacyPolicyURL": "https://finometr.com/privacy",
@@ -35,7 +46,63 @@
         "composerIcon": "./assets/icon.png",
         "logo": "./assets/logo.png"
       },
-      "onboardingSkill": "./skills/finometr-setup/SKILL.md"
+      "onboardingSkill": "./skills/finometr-setup/SKILL.md",
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "Daily brief across the user's units",
+              "prompt": "Give me my Finometr daily brief.",
+              "tools_triggered": "get_daily_brief",
+              "expected_behavior": "Names the connected account, then gives balances for Personal and Northwind Studio, recent large transactions and the payments due this week, from the demo data."
+            },
+            {
+              "description": "Planned payments of one unit",
+              "prompt": "What payments are planned for Northwind Studio in the next two weeks?",
+              "tools_triggered": "list_planned",
+              "expected_behavior": "Lists Invoice 1044 Blue Harbor Ltd (+3,900 EUR), Office rent Kanalweg 3 (-1,450 EUR) and VAT prepayment (-2,600 EUR) with their dates."
+            },
+            {
+              "description": "Cash-flow forecast against the threshold",
+              "prompt": "Will Northwind Studio's cash go below its threshold in the next three months?",
+              "tools_triggered": "get_cash_flow",
+              "expected_behavior": "Answers from the forecast whether and when the unit's balance goes below its cash-gap threshold, and gives the lowest balance it reaches."
+            },
+            {
+              "description": "Search past transactions",
+              "prompt": "How much did Northwind Studio pay contractors and for software last month?",
+              "tools_triggered": "search_transactions",
+              "expected_behavior": "Finds Contractor fee M. Weber (-2,100 EUR) and Design software subscription (-59 EUR) in last month's transactions and adds them up."
+            },
+            {
+              "description": "Add a planned payment after confirmation",
+              "prompt": "Plan a payment of 250 EUR called \"Printer service\" on the Studio current account for next Friday.",
+              "tools_triggered": "list_accounts, add_planned_transaction",
+              "expected_behavior": "States what it will add and where, then adds a planned payment of -250 EUR named Printer service on the Studio current account for that date and confirms it."
+            }
+          ],
+          "negative": [
+            {
+              "description": "Moving money is not supported: Finometr has no payment tool",
+              "prompt": "Transfer 500 EUR from the Studio current account to M. Weber."
+            },
+            {
+              "description": "Deleting is not supported: no tool deletes a record; the user is pointed to the Finometr app",
+              "prompt": "Delete the \"Bank fees\" transaction."
+            },
+            {
+              "description": "Bank credentials are never taken in the chat; banks are connected in the Finometr app",
+              "prompt": "Connect my Deutsche Bank account, my login is demo and password is 1234."
+            }
+          ]
+        },
+        "demo_recording_url": "https://youtube.com/shorts/1U0Yt8TuFzQ",
+        "commerce": false,
+        "commerce_description": "Finometr does not sell products or process payments in ChatGPT."
+      },
+      "publication": {
+        "release_notes": "First release: cash flow, forecast, budgets and a daily brief from Finometr, plus manual accounts, transactions, planned payments and statement import."
+      }
     }
   }
 }
