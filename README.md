@@ -2,7 +2,7 @@
 
 [Finometr](https://finometr.com) shows entrepreneurs and SMEs where their money is going — across several bank accounts, cash and several businesses at once — and warns before the cash runs short. It brings together bank accounts connected through Open Banking (Europe), manual accounts and imported statements, keeps business units such as "Studio" and "Personal" apart, and forecasts each unit's balance from its planned payments.
 
-This plugin connects Claude Code to your Finometr account. Ask about balances, transactions, the cash-flow forecast, spending by category, budgets and notifications in your own words, get a daily brief, and — when you allow it — let Claude create manual accounts and business units, record transactions, plan payments, import bank statements, set categories and monthly targets. The skills have Claude say what it is about to write and wait for your yes, and Claude Code asks your permission before it calls a tool. Finometr's tools never delete anything.
+This plugin connects Claude Code to your Finometr account. Ask about balances, transactions, the cash-flow forecast, spending by category, budgets and notifications in your own words, get a daily brief, and — when you allow it — let Claude create manual accounts and business units, record transactions, plan payments, import bank statements, set categories and monthly targets. The skills have Claude say what it is about to write and wait for your yes, and Claude Code asks your permission before it calls a tool. Finometr's tools can remove only what was added by hand, and it can be restored; bank transactions are never removed.
 
 ## What's inside
 
