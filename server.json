@@ -1,0 +1,33 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.finometr/finometr",
+  "title": "Finometr",
+  "description": "Cash flow for small businesses and households: bank accounts, forecast, budgets and a daily brief.",
+  "version": "0.1.0",
+  "websiteUrl": "https://finometr.com/docs/assistants?utm_source=mcp_registry&utm_medium=directory",
+  "repository": {
+    "url": "https://github.com/finometr-com/finometr-claude-plugin",
+    "source": "github"
+  },
+  "icons": [
+    {
+      "src": "https://finometr.com/favicon.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "256x256"
+      ]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://finometr.com/mcp"
+    }
+  ],
+  "_meta": {
+    "io.modelcontextprotocol.registry/publisher-provided": {
+      "auth": "OAuth 2.1 with PKCE; dynamic client registration and client ID metadata documents; no API key",
+      "docs": "https://finometr.com/docs/assistants?utm_source=mcp_registry&utm_medium=directory"
+    }
+  }
+}
