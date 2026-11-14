@@ -1,7 +1,7 @@
 {
   "name": "finometr",
   "displayName": "Finometr",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "description": "Ask Claude about your Finometr cash flow (balances, transactions, the forecast, budgets, projects and a daily brief) and let it add accounts, transactions and bank statements, set categories, including custom ones on Pro, and log hours after you confirm.",
   "author": {
     "name": "FINOMETR LTD",
