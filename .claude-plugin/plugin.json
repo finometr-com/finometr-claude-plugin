@@ -6,9 +6,9 @@
   "author": {
     "name": "FINOMETR LTD",
     "email": "support@finometr.com",
-    "url": "https://finometr.com"
+    "url": "https://finometr.com/?utm_source=claude&utm_medium=plugin"
   },
-  "homepage": "https://finometr.com/docs/assistants",
+  "homepage": "https://finometr.com/docs/assistants?utm_source=claude&utm_medium=plugin",
   "repository": "https://github.com/finometr-com/finometr-claude-plugin",
   "license": "MIT",
   "keywords": [
@@ -22,8 +22,8 @@
     "open-banking",
     "sme-finance"
   ],
-  "documentationUrl": "https://finometr.com/docs/assistants",
-  "supportUrl": "https://finometr.com/support",
+  "documentationUrl": "https://finometr.com/docs/assistants?utm_source=claude&utm_medium=plugin",
+  "supportUrl": "https://finometr.com/support?utm_source=claude&utm_medium=plugin",
   "privacyPolicyUrl": "https://finometr.com/privacy",
   "termsOfServiceUrl": "https://finometr.com/terms"
 }
