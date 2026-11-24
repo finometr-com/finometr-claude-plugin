@@ -2,8 +2,8 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "com.finometr/finometr",
   "title": "Finometr",
-  "description": "Personal and small-business finance: cash-flow forecast, budgets and a daily brief from your banks.",
-  "version": "0.1.1",
+  "description": "Cash-flow forecast, budgets, shared spending and a daily brief from your banks, in your assistant.",
+  "version": "0.1.2",
   "websiteUrl": "https://finometr.com/docs/assistants?utm_source=mcp_registry&utm_medium=directory",
   "repository": {
     "url": "https://github.com/finometr-com/finometr-claude-plugin",
